@@ -1,0 +1,22 @@
+---
+layout: inner-page-parent-dropdown
+includeTOC: true
+includeCollectionTOC: true
+---
+
+<section class="content">
+	<div class="wrap">
+		<div class="content-primary documentation">
+			<div class="inner-box">
+				<div class="toc-context">
+					{{content}}
+				</div>
+
+				{% include contributors-list.html %}
+			</div>
+		</div>
+
+		<!-- TOC -->
+		{% include sidebar-toc-multipage-overview.html %}
+	</div>
+</section>

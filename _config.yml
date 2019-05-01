@@ -1,4 +1,6 @@
 markdown: kramdown
+kramdown:
+  input: GFM
 
 title: "Scala Documentation"
 description: "Documentation for the Scala programming language - Tutorials, Overviews, Cheatsheets, and more."
@@ -13,10 +15,77 @@ keywords:
 - Document
 - Guide
 
-scala-version: 2.10.0
+scala-version: 2.12.8
+scala-213-version: 2.13.0-M5
 
-highlighter: pygments
-permalink: /:categories/:title.html
+collections:
+  style:
+    output: true
+  overviews:
+    output: true
+  tour:
+    output: true
+    permalink: /:collection/:path.html
+  tutorials:
+    output: true
+    permalink: /:collection/:path.html
+  sips:
+    output: true
+    permalink: /:collection/:path.html
+  books:
+    output: false
+  ja: # Japanese translations
+    output: true
+    permalink: /:collection/:path.html
+  zh-cn: # Chinese (Simplified) translations
+    output: true
+    permalink: /:collection/:path.html
+  ru: # Russian translations
+    output: true
+    permalink: /:collection/:path.html
+  es: # Spanish translations
+    output: true
+    permalink: /:collection/:path.html
+  ba: # Bosnian translations
+    output: true
+    permalink: /:collection/:path.html
+  pl: # Polish translations
+    output: true
+    permalink: /:collection/:path.html
+  pt-br: # Brazilian Portuguese translations
+    output: true
+    permalink: /:collection/:path.html
+  ko: # Korean translations
+    output: true
+    permalink: /:collection/:path.html
+  de: # German translations
+    output: true
+    permalink: /:collection/:path.html
+  it: # Italian translations
+    output: true
+    permalink: /:collection/:path.html
+  zh-tw: # Taiwanese translations
+    output: true
+    permalink: /:collection/:path.html
+  fr: # French translations
+    output: true
+    permalink: /:collection/:path.html
+  th: # Thai translations
+    output: true
+    permalink: /:collection/:path.html
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "tour"
+    values:
+      overview-name: "Tour of Scala"
+
+highlighter: rouge
+permalink: /:categories/:title.html:output_ext
 baseurl:
-
-# markdown: rdiscount
+exclude: ["vendor"]
+plugins:
+  - jekyll-redirect-from
+  - jekyll-scalafiddle

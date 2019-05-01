@@ -1,5 +1,12 @@
 _site
+.ruby-version
 .DS_Store
 .project
 .settings
+/.jekyll-metadata
 *~
+vendor/bundle
+.idea/
+/coursier
+/tut-tmp/
+.sass-cache/
